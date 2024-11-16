@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        cursor: grab;
+    }
+    body{
+        text-align: center;
+    }
+    p{
+        margin-left: 610px;
+        margin-right: 610px;
+    }
+</style>
+<body>
+<p style="background-color: palevioletred;;"><button style="background-color: blue;" onclick="inc()">up</button><b id="a"></b><button style="background-color: red;" onclick="red()">down</button></p><b>+</b>
+<p style="background-color: aqua;"><button style="background-color: red;" onclick="incr()">up</button><b id="b"></b><button style="background-color: blue;" onclick="redu()">down</button></p>
+<p id="c"></p>
+    <script>
+        var a = 0;
+        function inc() {
+            document.getElementById("a").innerHTML = a+1;
+            a = a+1;
+        }
+        function red() {
+            document.getElementById("a").innerHTML = a-1;
+            a = a-1;
+        }
+        document.getElementById("a").innerHTML = a;
+
+        var b = 0;
+        function incr() {
+            document.getElementById("b").innerHTML = b+1;
+            b = b+1;
+        }
+        function redu() {
+            document.getElementById("b").innerHTML = b-1;
+            b = b-1;
+        }
+        document.getElementById("b").innerHTML = b;
+
+        document.getElementById("c").innerHTML = a+b;
+    </script>
+</body>
+</html>
